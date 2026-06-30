@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium static website for Class 12 Mathematics Chapter 5 Continuity and Differentiability.">
+  <title>MathsForge | Continuity and Differentiability</title>
+  <style>
+    :root{color-scheme:light;--ink:#111827;--text:#536170;--muted:#718096;--line:rgba(15,23,42,.11);--panel:rgba(255,255,255,.86);--soft:#d9f1f7;--brand:#145c70;--warm:#ea7a3a;--sun:#f5b942;--mint:#b9f6de;--bg:#f7fbfc}
+    :root.dark{color-scheme:dark;--ink:#f8fafc;--text:#c8d6dc;--muted:#9eb2ba;--line:rgba(255,255,255,.13);--panel:rgba(255,255,255,.055);--soft:rgba(185,246,222,.1);--brand:#b9f6de;--bg:#071016}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;background:var(--bg);color:var(--ink);font-family:Manrope,Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit}.wrap{width:min(1180px,100%);margin:auto;padding:0 22px}.topbar{position:fixed;inset:12px 12px auto;z-index:20}.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid rgba(255,255,255,.75);border-radius:18px;background:rgba(255,255,255,.82);box-shadow:0 20px 70px rgba(15,23,42,.1);backdrop-filter:blur(16px);padding:12px 14px}.dark .nav{border-color:rgba(255,255,255,.1);background:rgba(7,16,22,.82)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:950}.brand-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:#111827;color:white}.dark .brand-icon{background:var(--mint);color:#111827}.brand span:last-child{font-size:14px}.brand em{font-style:normal;color:#145c70}.dark .brand em{color:var(--mint)}.links{display:flex;gap:4px;align-items:center}.links a,.mode,.menu{border:0;border-radius:10px;background:transparent;color:#64748b;font-size:11px;font-weight:900;text-decoration:none;padding:9px 11px}.links a:hover,.mode:hover,.menu:hover{background:var(--soft);color:var(--brand)}.mode,.menu{border:1px solid var(--line);background:var(--panel);color:var(--ink)}.menu{display:none}.hero{position:relative;overflow:hidden;padding:148px 0 84px;background:linear-gradient(180deg,rgba(247,251,252,.96),rgba(232,246,248,.94) 72%,var(--bg))}.dark .hero{background:linear-gradient(180deg,#071016,#0c1d27 72%,#071016)}.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(20,92,112,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(20,92,112,.07) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,black,transparent 92%)}.hero .wrap{position:relative;z-index:1}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--brand);font-size:10px;font-weight:950;text-transform:uppercase;letter-spacing:.16em}.eyebrow:before{content:"";width:30px;height:1px;background:var(--brand);opacity:.45}.hero h1{max-width:930px;margin:16px 0 0;font-size:clamp(3rem,7vw,5.9rem);line-height:.98;font-weight:950;letter-spacing:0}.hero p{max-width:760px;color:var(--text);font-size:17px;line-height:1.8;font-weight:700}.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.primary,.ghost{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:12px 18px;font-size:12px;font-weight:950;text-decoration:none}.primary{border:0;background:#111827;color:white;box-shadow:0 18px 42px rgba(15,23,42,.16)}.dark .primary{background:var(--mint);color:#111827}.ghost{border:1px solid var(--line);background:var(--panel);color:var(--ink)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:52px;max-width:760px;overflow:hidden;border:1px solid rgba(255,255,255,.75);border-radius:10px;background:rgba(255,255,255,.5);box-shadow:0 22px 70px rgba(15,23,42,.1)}.dark .stats{border-color:var(--line);background:rgba(255,255,255,.04)}.stats div{display:grid;place-items:center;align-content:center;gap:4px;min-height:100px;background:rgba(255,255,255,.45)}.dark .stats div{background:rgba(255,255,255,.035)}.stats strong{font-size:26px}.stats span{color:#64748b;font-size:10px;font-weight:950;text-transform:uppercase}.dark .stats span{color:#9eb2ba}section{padding:72px 0;border-top:1px solid var(--line)}section.tint{background:rgba(255,255,255,.55)}.dark section.tint{background:rgba(255,255,255,.025)}.section-head h2{max-width:850px;margin:14px 0 0;font-size:clamp(2rem,4vw,3.4rem);line-height:1.08;font-weight:950;letter-spacing:0}.section-head p{max-width:760px;color:var(--text);line-height:1.75;font-weight:700}.grid{display:grid;gap:16px}.cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}.cards-2{grid-template-columns:repeat(2,minmax(0,1fr))}.card,.formula,.derivation,.diagram,.question-card,.lab-card,.print-sheet{border:1px solid var(--line);border-radius:10px;background:var(--panel);box-shadow:0 18px 48px rgba(15,23,42,.07);padding:18px}.dark .card,.dark .formula,.dark .derivation,.dark .diagram,.dark .question-card,.dark .lab-card,.dark .print-sheet{box-shadow:none}.card h3,.formula h3,.derivation h3,.diagram h3,.question-card h3,.lab-card h3{margin:8px 0;color:var(--ink);font-size:18px}.card p,.formula p,.derivation p,.diagram p,.question-card p,.lab-card p{color:var(--text);line-height:1.65;font-weight:700}.pill-row{display:flex;flex-wrap:wrap;gap:8px}.pill-row span,.tag{display:inline-flex;border-radius:999px;background:var(--soft);color:var(--brand);padding:5px 9px;font-size:10px;font-weight:950;text-transform:uppercase}.formula-code{margin:12px 0;border-radius:10px;background:#111827;color:white;padding:14px;overflow:auto;font-family:Consolas,ui-monospace,monospace;font-weight:800}.dark .formula-code{background:rgba(185,246,222,.1)}.note-list{display:grid;gap:10px;margin:14px 0 0;padding:0;list-style:none}.note-list li{border-left:3px solid var(--brand);background:var(--soft);padding:10px 12px;color:var(--text);line-height:1.55;font-weight:750}.derivation summary{cursor:pointer;font-weight:950}.derivation ol{color:var(--text);line-height:1.65;font-weight:700}.diagram{overflow:hidden;padding:0}.diagram svg{width:100%;display:block;background:linear-gradient(135deg,rgba(217,241,247,.85),rgba(255,255,255,.68));color:#145c70}.dark .diagram svg{background:linear-gradient(135deg,rgba(20,92,112,.22),rgba(255,255,255,.04))}.diagram svg text{fill:#334155;font-size:13px;font-weight:900}.dark .diagram svg text{fill:#e2e8f0}.diagram-body{padding:16px}.search{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:6px 12px;margin:26px 0 16px}.search input{width:100%;min-height:44px;border:0;background:transparent;color:var(--ink);outline:0;font-weight:800}.lab-shell{display:grid;grid-template-columns:1fr 360px;gap:18px}.stage{min-height:420px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(135deg,rgba(217,241,247,.65),rgba(255,255,255,.75));padding:16px}.dark .stage{background:linear-gradient(135deg,rgba(20,92,112,.2),rgba(255,255,255,.035))}.stage svg{width:100%;height:300px}.lab-result{border-left:3px solid var(--warm);background:rgba(245,185,66,.14);padding:12px;color:var(--text);line-height:1.6;font-weight:800}.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.lab-card label{display:grid;gap:6px;margin-top:10px;color:var(--text);font-size:12px;font-weight:950}.lab-card input,.lab-card select{border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);padding:10px}.answer{display:none;border-top:1px solid var(--line);padding-top:12px}.answer.open{display:grid;gap:6px}.dashboard{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.dashboard ul{margin:0;padding-left:18px;color:var(--text);line-height:1.65;font-weight:700}.print-sheet{margin-top:24px}.print-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.footer{border-top:1px solid var(--line);padding:42px 0;background:var(--panel);color:var(--text);font-weight:700}.mobile-links{display:none}.hide{display:none!important}
+    @media(max-width:980px){.links{display:none}.menu{display:inline-flex}.mobile-links{display:grid;gap:8px;margin-top:8px;border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:10px}.mobile-links a{text-decoration:none;font-size:12px;font-weight:950;color:var(--text);padding:10px}.cards-3,.cards-2,.dashboard,.lab-shell,.print-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+    @media print{.topbar,.cta,.lab-card,.practice-filter,.answer-toggle,.footer{display:none!important}section{padding:18px 0;border:0}.card,.formula,.derivation,.diagram,.question-card,.print-sheet{box-shadow:none;border:1px solid #ddd}.print-grid{grid-template-columns:1fr 1fr}.hero{padding:20px 0}.hero h1{font-size:36px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="#home" aria-label="MathsForge home"><span class="brand-icon">C</span><span>MATHS<em>FORGE</em></span></a>
+      <div class="links"><a href="#map">Map</a><a href="#notes">Notes</a><a href="#formulas">Formulas</a><a href="#derivations">Proofs</a><a href="#diagrams">Diagrams</a><a href="#lab">Lab</a><a href="#practice">Practice</a><a href="#dashboard">Revise</a><a href="#print">Print</a></div>
+      <div><button class="mode" type="button" id="mode">Dark</button><button class="menu" type="button" id="menu">Menu</button></div>
+    </nav>
+    <div class="mobile-links hide" id="mobileLinks"><a href="#map">Map</a><a href="#notes">Notes</a><a href="#formulas">Formulas</a><a href="#derivations">Proofs</a><a href="#diagrams">Diagrams</a><a href="#lab">Lab</a><a href="#practice">Practice</a><a href="#dashboard">Revise</a><a href="#print">Print</a></div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="grid-bg"></div>
+      <div class="wrap">
+        <p class="eyebrow">Class 12 Mathematics / Chapter 5</p>
+        <h1>Continuity and Differentiability</h1>
+        <p>A visual learning website for limits, continuity, differentiability, derivative rules, chain rule, implicit differentiation, logarithmic differentiation, and second order derivatives.</p>
+        <div class="cta"><a class="primary" href="#notes">Start learning</a><a class="ghost" href="#lab">Open interactive lab</a><a class="ghost" href="#print">Printable sheet</a></div>
+        <div class="stats">
+          <div><strong>8</strong><span>note sections</span></div>
+          <div><strong>8</strong><span>formula cards</span></div>
+          <div><strong>12</strong><span>practice questions</span></div>
+          <div><strong>0</strong><span>paid services</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tint" id="map">
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">Topic map</p><h2>From smooth graph idea to derivative rules.</h2><p>This chapter connects limit, value, tangent slope, and algebraic differentiation rules into one flow.</p></div>
+        <div class="grid cards-3"><article class="card"><div class="pill-row"><span>01</span></div><h3>Continuity</h3><p>A function is continuous when left limit, right limit, and value agree.</p></article><article class="card"><div class="pill-row"><span>02</span></div><h3>Differentiability</h3><p>Differentiability means a unique finite tangent slope exists.</p></article><article class="card"><div class="pill-row"><span>03</span></div><h3>Rules</h3><p>Use sum, product, quotient, and chain rules accurately.</p></article><article class="card"><div class="pill-row"><span>04</span></div><h3>Implicit</h3><p>Differentiate equations where y is not isolated.</p></article><article class="card"><div class="pill-row"><span>05</span></div><h3>Logarithmic</h3><p>Use logs to simplify powers, products, and quotients.</p></article><article class="card"><div class="pill-row"><span>06</span></div><h3>Second derivative</h3><p>Differentiate again for curvature and later application questions.</p></article></div>
+      </div>
+    </section>
+
+    <section id="notes">
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">Deep notes</p><h2>Section-wise notes with CBSE and JEE lenses.</h2><p>Each card gives the idea, board writing angle, exam focus, and common trap.</p></div>
+        <label class="search practice-filter">Search notes <input id="noteSearch" placeholder="Type a concept, formula, trap, or keyword"></label>
+        <div class="grid cards-2" id="noteGrid"><article class="card note-card" data-note="continuity at a point f is continuous at x=a if left limit, right limit, and f(a) are equal. write all three conditions clearly. piecewise functions often test parameter values. limit existing is not enough if f(a) differs."><div class="pill-row"><span>01</span><span>Continuity</span></div><h3>Continuity at a point</h3><p>f is continuous at x=a if left limit, right limit, and f(a) are equal.</p><ul class="note-list"><li><b>CBSE writing:</b> Write all three conditions clearly.</li><li><b>JEE focus:</b> Piecewise functions often test parameter values.</li><li><b>Common trap:</b> Limit existing is not enough if f(a) differs.</li></ul></article><article class="card note-card" data-note="continuity on interval a function is continuous on an interval if it is continuous at every point of the interval. check endpoints with one-sided limits. endpoint treatment matters in closed intervals. do not use two-sided limit at an endpoint."><div class="pill-row"><span>02</span><span>Continuity</span></div><h3>Continuity on interval</h3><p>A function is continuous on an interval if it is continuous at every point of the interval.</p><ul class="note-list"><li><b>CBSE writing:</b> Check endpoints with one-sided limits.</li><li><b>JEE focus:</b> Endpoint treatment matters in closed intervals.</li><li><b>Common trap:</b> Do not use two-sided limit at an endpoint.</li></ul></article><article class="card note-card" data-note="differentiability at a point differentiability needs equal left-hand and right-hand derivatives. for modulus and piecewise functions, compare lhd and rhd. corners and cusps are not differentiable. continuity does not always imply differentiability."><div class="pill-row"><span>03</span><span>Differentiability</span></div><h3>Differentiability at a point</h3><p>Differentiability needs equal left-hand and right-hand derivatives.</p><ul class="note-list"><li><b>CBSE writing:</b> For modulus and piecewise functions, compare LHD and RHD.</li><li><b>JEE focus:</b> Corners and cusps are not differentiable.</li><li><b>Common trap:</b> Continuity does not always imply differentiability.</li></ul></article><article class="card note-card" data-note="differentiability implies continuity if a function is differentiable at a point, then it is continuous there. state this implication in proof questions. use contrapositive: discontinuity means not differentiable. the converse is false."><div class="pill-row"><span>04</span><span>Connection</span></div><h3>Differentiability implies continuity</h3><p>If a function is differentiable at a point, then it is continuous there.</p><ul class="note-list"><li><b>CBSE writing:</b> State this implication in proof questions.</li><li><b>JEE focus:</b> Use contrapositive: discontinuity means not differentiable.</li><li><b>Common trap:</b> The converse is false.</li></ul></article><article class="card note-card" data-note="product and quotient rules product and quotient derivatives must be applied in correct order. show u and v before using formulas. avoid expanding when product rule is faster. quotient rule numerator order is important."><div class="pill-row"><span>05</span><span>Rules</span></div><h3>Product and quotient rules</h3><p>Product and quotient derivatives must be applied in correct order.</p><ul class="note-list"><li><b>CBSE writing:</b> Show u and v before using formulas.</li><li><b>JEE focus:</b> Avoid expanding when product rule is faster.</li><li><b>Common trap:</b> Quotient rule numerator order is important.</li></ul></article><article class="card note-card" data-note="chain rule for composite functions, differentiate outside first, then multiply by derivative of inside. use substitution u=g(x) for clarity. nested functions are common in objective problems. do not forget inner derivative."><div class="pill-row"><span>06</span><span>Chain</span></div><h3>Chain rule</h3><p>For composite functions, differentiate outside first, then multiply by derivative of inside.</p><ul class="note-list"><li><b>CBSE writing:</b> Use substitution u=g(x) for clarity.</li><li><b>JEE focus:</b> Nested functions are common in objective problems.</li><li><b>Common trap:</b> Do not forget inner derivative.</li></ul></article><article class="card note-card" data-note="implicit differentiation when differentiating y terms with respect to x, multiply by dy/dx. collect dy/dx terms and solve. useful for curves and parametric-looking equations. derivative of y^2 is 2y dy/dx, not 2y."><div class="pill-row"><span>07</span><span>Implicit</span></div><h3>Implicit differentiation</h3><p>When differentiating y terms with respect to x, multiply by dy/dx.</p><ul class="note-list"><li><b>CBSE writing:</b> Collect dy/dx terms and solve.</li><li><b>JEE focus:</b> Useful for curves and parametric-looking equations.</li><li><b>Common trap:</b> Derivative of y^2 is 2y dy/dx, not 2y.</li></ul></article><article class="card note-card" data-note="logarithmic differentiation take log on both sides to simplify variable powers, products, and quotients. use log rules carefully before differentiating. power-variable expressions become easy. use absolute values when needed in logs."><div class="pill-row"><span>08</span><span>Log</span></div><h3>Logarithmic differentiation</h3><p>Take log on both sides to simplify variable powers, products, and quotients.</p><ul class="note-list"><li><b>CBSE writing:</b> Use log rules carefully before differentiating.</li><li><b>JEE focus:</b> Power-variable expressions become easy.</li><li><b>Common trap:</b> Use absolute values when needed in logs.</li></ul></article></div>
+      </div>
+    </section>
+
+    <section class="tint" id="formulas">
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">Formula sheet</p><h2>High-yield formulas with exact usage conditions.</h2><p>Use these as quick revision cards before solving examples.</p></div>
+        <div class="grid cards-3"><article class="formula"><div class="pill-row"><span>Continuity</span></div><h3>Continuity condition</h3><div class="formula-code">lim x-&gt;a- f(x) = lim x-&gt;a+ f(x) = f(a)</div><p>Limit and value meet.</p><ul class="note-list"><li><b>Example:</b> Use for piecewise parameter questions.</li><li><b>Trap:</b> Both one-sided limits are needed.</li></ul></article><article class="formula"><div class="pill-row"><span>Derivative</span></div><h3>First principle</h3><div class="formula-code">f'(a)=lim h-&gt;0 [f(a+h)-f(a)]/h</div><p>Definition of derivative at a point.</p><ul class="note-list"><li><b>Example:</b> Use to prove derivative of x^2 is 2x.</li><li><b>Trap:</b> Limit must exist and be finite.</li></ul></article><article class="formula"><div class="pill-row"><span>Rules</span></div><h3>Product rule</h3><div class="formula-code">(uv) prime = u prime v + u v prime</div><p>Differentiate one factor at a time.</p><ul class="note-list"><li><b>Example:</b> d(x sin x)=sin x + x cos x.</li><li><b>Trap:</b> Do not multiply derivatives only.</li></ul></article><article class="formula"><div class="pill-row"><span>Rules</span></div><h3>Quotient rule</h3><div class="formula-code">(u/v) prime = (v u prime - u v prime)/v^2</div><p>Bottom times top derivative minus top times bottom derivative.</p><ul class="note-list"><li><b>Example:</b> d(x/(x+1)) = 1/(x+1)^2.</li><li><b>Trap:</b> Numerator order matters.</li></ul></article><article class="formula"><div class="pill-row"><span>Chain</span></div><h3>Chain rule</h3><div class="formula-code">d/dx f(g(x)) = f prime(g(x)) g prime(x)</div><p>Outside derivative times inside derivative.</p><ul class="note-list"><li><b>Example:</b> d(sin x^2)=2x cos x^2.</li><li><b>Trap:</b> Do not miss 2x.</li></ul></article><article class="formula"><div class="pill-row"><span>Trig</span></div><h3>Basic trig derivatives</h3><div class="formula-code">d(sin x)=cos x, d(cos x)=-sin x, d(tan x)=sec^2 x</div><p>Core trigonometric derivatives.</p><ul class="note-list"><li><b>Example:</b> d(tan 3x)=3sec^2 3x.</li><li><b>Trap:</b> Use radians.</li></ul></article><article class="formula"><div class="pill-row"><span>Inverse</span></div><h3>Inverse trig derivatives</h3><div class="formula-code">d(sin^-1 x)=1/sqrt(1-x^2), d(tan^-1 x)=1/(1+x^2)</div><p>Important for Chapter 5 formulas.</p><ul class="note-list"><li><b>Example:</b> d(tan^-1 2x)=2/(1+4x^2).</li><li><b>Trap:</b> Chain rule still applies.</li></ul></article><article class="formula"><div class="pill-row"><span>Log</span></div><h3>Log derivative</h3><div class="formula-code">d(log x)=1/x, d(e^x)=e^x</div><p>Exponential and logarithmic core rules.</p><ul class="note-list"><li><b>Example:</b> d(log(3x+1))=3/(3x+1).</li><li><b>Trap:</b> Domain of log matters.</li></ul></article></div>
+      </div>
+    </section>
+
+    <section id="derivations">
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">Derivation bank</p><h2>Proofs that can be reproduced in exams.</h2><p>Open a proof, follow the steps, and check the final result.</p></div>
+        <div class="grid"><article class="derivation"><details><summary>Prove differentiability implies continuity</summary><ol><li>Assume f is differentiable at a.</li><li>Write f(x)-f(a) = [(f(x)-f(a))/(x-a)](x-a).</li><li>As x approaches a, first factor approaches f prime(a), second approaches 0.</li><li>Thus f(x)-f(a) approaches 0, so f(x) approaches f(a).</li></ol><p><b>Final:</b> Differentiable =&gt; continuous.</p><p><b>Shortcut:</b> Write f(x)-f(a) as product.</p><p><b>Warning:</b> The converse is false.</p></details></article><article class="derivation"><details><summary>Derivative of x^2 by first principle</summary><ol><li>f(x+h)-f(x)=(x+h)^2-x^2.</li><li>This equals 2xh+h^2.</li><li>Divide by h to get 2x+h.</li><li>Let h approach 0 to get 2x.</li></ol><p><b>Final:</b> f'(x)=2x</p><p><b>Shortcut:</b> Expand (x+h)^2.</p><p><b>Warning:</b> Cancel h before taking limit.</p></details></article><article class="derivation"><details><summary>Product rule proof idea</summary><ol><li>Write difference quotient for u(x)v(x).</li><li>Add and subtract u(x+h)v(x).</li><li>Split into two limits.</li><li>Use derivative definitions and continuity to get the formula.</li></ol><p><b>Final:</b> (uv) prime = u prime v + u v prime.</p><p><b>Shortcut:</b> Add and subtract u(x+h)v(x).</p><p><b>Warning:</b> Continuity of differentiable functions is used.</p></details></article><article class="derivation"><details><summary>Implicit differentiation method</summary><ol><li>Differentiate both sides with respect to x.</li><li>For y terms, multiply by dy/dx.</li><li>Move dy/dx terms to one side.</li><li>Factor and solve for dy/dx.</li></ol><p><b>Final:</b> Collect dy/dx terms.</p><p><b>Shortcut:</b> Treat y as function of x.</p><p><b>Warning:</b> Every y derivative carries dy/dx.</p></details></article></div>
+      </div>
+    </section>
+
+    <section class="tint" id="diagrams">
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">2D diagram bank</p><h2>Clean visual models for fast memory.</h2><p>Each diagram is SVG based, so it works fully offline and on GitHub Pages.</p></div>
+        <div class="grid cards-2"><article class="diagram"><svg viewBox="0 0 420 280" aria-hidden="true">
+      
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L9,3 z" fill="#145c70"></path>
+      </marker>
+    </defs>
+    <rect x="14" y="14" width="392" height="252" rx="18" fill="currentColor" opacity=".045"></rect>
+  
+      <line x1="65" y1="205" x2="360" y2="205" stroke="#94a3b8"></line>
+      <line x1="210" y1="235" x2="210" y2="45" stroke="#94a3b8"></line>
+      <path d="M70 165 C130 88, 164 88, 204 140" fill="none" stroke="#145c70" stroke-width="4"></path>
+      <path d="M222 120 C260 88, 310 92, 350 150" fill="none" stroke="#145c70" stroke-width="4"></path>
+      <circle cx="210" cy="140" r="8" fill="#fff" stroke="#ea7a3a" stroke-width="4"></circle>
+      <circle cx="210" cy="96" r="6" fill="#ea7a3a"></circle>
+      <text x="112" y="232">limit and value must meet</text>
+    </svg><div class="diagram-body"><div class="pill-row"><span>Continuity</span></div><h3>Limit and value mismatch</h3><p>A removable break shows why value must match the limit.</p><p><b>On paper:</b> Draw open circle at limit and filled dot at function value.</p></div></article><article class="diagram"><svg viewBox="0 0 420 280" aria-hidden="true">
+      
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L9,3 z" fill="#145c70"></path>
+      </marker>
+    </defs>
+    <rect x="14" y="14" width="392" height="252" rx="18" fill="currentColor" opacity=".045"></rect>
+  
+      <line x1="65" y1="210" x2="360" y2="210" stroke="#94a3b8"></line>
+      <line x1="96" y1="235" x2="96" y2="45" stroke="#94a3b8"></line>
+      <path d="M82 204 C130 190, 170 154, 214 114 C256 76, 304 64, 352 76" fill="none" stroke="#145c70" stroke-width="4"></path>
+      <line x1="150" y1="174" x2="300" y2="78" stroke="#ea7a3a" stroke-width="4"></line>
+      <circle cx="226" cy="125" r="6" fill="#111827"></circle>
+      <text x="235" y="138">tangent slope = derivative</text>
+    </svg><div class="diagram-body"><div class="pill-row"><span>Derivative</span></div><h3>Tangent slope</h3><p>Derivative is the slope of the tangent at a point.</p><p><b>On paper:</b> Draw curve, point, tangent, and slope label.</p></div></article><article class="diagram"><svg viewBox="0 0 420 280" aria-hidden="true">
+      
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L9,3 z" fill="#145c70"></path>
+      </marker>
+    </defs>
+    <rect x="14" y="14" width="392" height="252" rx="18" fill="currentColor" opacity=".045"></rect>
+  
+      <line x1="65" y1="210" x2="360" y2="210" stroke="#94a3b8"></line>
+      <line x1="96" y1="235" x2="96" y2="45" stroke="#94a3b8"></line>
+      <path d="M82 204 C130 190, 170 154, 214 114 C256 76, 304 64, 352 76" fill="none" stroke="#145c70" stroke-width="4"></path>
+      <line x1="150" y1="174" x2="300" y2="78" stroke="#ea7a3a" stroke-width="4"></line>
+      <circle cx="226" cy="125" r="6" fill="#111827"></circle>
+      <text x="235" y="138">tangent slope = derivative</text>
+    </svg><div class="diagram-body"><div class="pill-row"><span>Chain rule</span></div><h3>Nested function flow</h3><p>Outside derivative is multiplied by inside derivative.</p><p><b>On paper:</b> Draw boxes f(g(x)) -&gt; g(x) -&gt; x.</p></div></article><article class="diagram"><svg viewBox="0 0 420 280" aria-hidden="true">
+      
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L9,3 z" fill="#145c70"></path>
+      </marker>
+    </defs>
+    <rect x="14" y="14" width="392" height="252" rx="18" fill="currentColor" opacity=".045"></rect>
+  
+      <line x1="65" y1="205" x2="360" y2="205" stroke="#94a3b8"></line>
+      <line x1="210" y1="235" x2="210" y2="45" stroke="#94a3b8"></line>
+      <path d="M70 165 C130 88, 164 88, 204 140" fill="none" stroke="#145c70" stroke-width="4"></path>
+      <path d="M222 120 C260 88, 310 92, 350 150" fill="none" stroke="#145c70" stroke-width="4"></path>
+      <circle cx="210" cy="140" r="8" fill="#fff" stroke="#ea7a3a" stroke-width="4"></circle>
+      <circle cx="210" cy="96" r="6" fill="#ea7a3a"></circle>
+      <text x="112" y="232">limit and value must meet</text>
+    </svg><div class="diagram-body"><div class="pill-row"><span>Piecewise</span></div><h3>Piecewise continuity</h3><p>One-sided limits must meet at joining point.</p><p><b>On paper:</b> Draw left and right branches approaching same height.</p></div></article></div>
+      </div>
+    </section>
+
+    <section id="lab">
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">Interactive simulation</p><h2>Tangent Slope Lab</h2><p>Move the point on a curve and see how the derivative becomes tangent slope.</p></div>
+        <div class="lab-shell">
+          <div class="stage"><svg id="labSvg" viewBox="0 0 520 300" aria-hidden="true"></svg><div class="lab-result" id="labOutput"></div></div>
+          
+      <div class="lab-card">
+        <h3>Tangent Slope Lab</h3>
+        <p>Move x and compare function value with derivative value.</p>
+        <label>Function <select id="fn"><option value="square">f(x)=x^2</option><option value="cube">f(x)=x^3</option><option value="reciprocal">f(x)=1/x</option></select></label>
+        <label>x value <input id="xValue" type="range" min="-4" max="4" step="0.1" value="1.5"></label>
+      </div>
+    
+        </div>
+      </div>
+    </section>
+
+    <section class="tint" id="practice">
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">Practice bank</p><h2>Exam-style questions with answer reveal.</h2><p>Filter by keyword, try the question first, then reveal the answer and trap.</p></div>
+        <label class="search practice-filter">Filter questions <input id="questionSearch" placeholder="Try CBSE, JEE, proof, easy, hard, formula"></label>
+        <div class="grid cards-2" id="questionGrid"><article class="question-card" data-q="cbse easy state condition for continuity at x=a. lhl=rhl=f(a)"><div class="pill-row"><span>CBSE</span><span>Easy</span></div><h3>1. State condition for continuity at x=a.</h3><button class="ghost answer-toggle" type="button">Show answer</button><div class="answer"><strong>Answer: LHL=RHL=f(a)</strong><p>Both one-sided limits and function value must be equal.</p><p><b>Trap:</b> Limit alone is not enough.</p></div></article><article class="question-card" data-q="derivative easy differentiate x^5. 5x^4"><div class="pill-row"><span>Derivative</span><span>Easy</span></div><h3>2. Differentiate x^5.</h3><button class="ghost answer-toggle" type="button">Show answer</button><div class="answer"><strong>Answer: 5x^4</strong><p>Use power rule d(x^n)=nx^(n-1).</p><p><b>Trap:</b> Subtract one from exponent.</p></div></article><article class="question-card" data-q="product medium differentiate x sin x. sin x + x cos x"><div class="pill-row"><span>Product</span><span>Medium</span></div><h3>3. Differentiate x sin x.</h3><button class="ghost answer-toggle" type="button">Show answer</button><div class="answer"><strong>Answer: sin x + x cos x</strong><p>Use product rule.</p><p><b>Trap:</b> Do not write cos x only.</p></div></article><article class="question-card" data-q="chain medium differentiate sin(x^2). 2x cos(x^2)"><div class="pill-row"><span>Chain</span><span>Medium</span></div><h3>4. Differentiate sin(x^2).</h3><button class="ghost answer-toggle" type="button">Show answer</button><div class="answer"><strong>Answer: 2x cos(x^2)</strong><p>Outside derivative cos(x^2), inside derivative 2x.</p><p><b>Trap:</b> Do not forget 2x.</p></div></article><article class="question-card" data-q="quotient medium differentiate x/(x+1). 1/(x+1)^2"><div class="pill-row"><span>Quotient</span><span>Medium</span></div><h3>5. Differentiate x/(x+1).</h3><button class="ghost answer-toggle" type="button">Show answer</button><div class="answer"><strong>Answer: 1/(x+1)^2</strong><p>[(x+1)*1-x*1]/(x+1)^2.</p><p><b>Trap:</b> Numerator order matters.</p></div></article><article class="question-card" data-q="implicit medium differentiate x^2+y^2=25. dy/dx=-x/y"><div class="pill-row"><span>Implicit</span><span>Medium</span></div><h3>6. Differentiate x^2+y^2=25.</h3><button class="ghost answer-toggle" type="button">Show answer</button><div class="answer"><strong>Answer: dy/dx=-x/y</strong><p>2x+2y dy/dx=0.</p><p><b>Trap:</b> Derivative of y^2 includes dy/dx.</p></div></article><article class="question-card" data-q="continuity hard if f is differentiable at a, is it continuous at a? yes"><div class="pill-row"><span>Continuity</span><span>Hard</span></div><h3>7. If f is differentiable at a, is it continuous at a?</h3><button class="ghost answer-toggle" type="button">Show answer</button><div class="answer"><strong>Answer: Yes</strong><p>Differentiability implies continuity.</p><p><b>Trap:</b> Continuity does not imply differentiability.</p></div></article><article class="question-card" data-q="trap medium is |x| differentiable at x=0? no"><div class="pill-row"><span>Trap</span><span>Medium</span></div><h3>8. Is |x| differentiable at x=0?</h3><button class="ghost answer-toggle" type="button">Show answer</button><div class="answer"><strong>Answer: No</strong><p>LHD=-1 and RHD=1.</p><p><b>Trap:</b> It is continuous but not differentiable.</p></div></article><article class="question-card" data-q="log medium differentiate log(3x+1). 3/(3x+1)"><div class="pill-row"><span>Log</span><span>Medium</span></div><h3>9. Differentiate log(3x+1).</h3><button class="ghost answer-toggle" type="button">Show answer</button><div class="answer"><strong>Answer: 3/(3x+1)</strong><p>Use chain rule with log u.</p><p><b>Trap:</b> Do not write 1/(3x+1) only.</p></div></article><article class="question-card" data-q="inverse hard differentiate tan^-1(2x). 2/(1+4x^2)"><div class="pill-row"><span>Inverse</span><span>Hard</span></div><h3>10. Differentiate tan^-1(2x).</h3><button class="ghost answer-toggle" type="button">Show answer</button><div class="answer"><strong>Answer: 2/(1+4x^2)</strong><p>Derivative is u prime/(1+u^2) with u=2x.</p><p><b>Trap:</b> Chain rule applies.</p></div></article><article class="question-card" data-q="second medium if y=x^3, find d2y/dx2. 6x"><div class="pill-row"><span>Second</span><span>Medium</span></div><h3>11. If y=x^3, find d2y/dx2.</h3><button class="ghost answer-toggle" type="button">Show answer</button><div class="answer"><strong>Answer: 6x</strong><p>First derivative 3x^2, second derivative 6x.</p><p><b>Trap:</b> Do not stop at first derivative.</p></div></article><article class="question-card" data-q="cbse hard find derivative of y=x^x. x^x(1+log x)"><div class="pill-row"><span>CBSE</span><span>Hard</span></div><h3>12. Find derivative of y=x^x.</h3><button class="ghost answer-toggle" type="button">Show answer</button><div class="answer"><strong>Answer: x^x(1+log x)</strong><p>Take log: log y=x log x, then y prime/y=log x+1.</p><p><b>Trap:</b> Power rule alone does not apply.</p></div></article></div>
+      </div>
+    </section>
+
+    <section id="dashboard">
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">Revision dashboard</p><h2>Last-day revision without panic.</h2><p>Use this dashboard to decide what to revise first and what mistakes to avoid.</p></div>
+        <div class="dashboard"><article class="card"><h3>Top concepts</h3><ul><li>Continuity needs limit equals value</li><li>Differentiability needs equal side derivatives</li><li>Differentiability implies continuity</li><li>Chain rule is outside times inside</li><li>Implicit y terms need dy/dx</li></ul></article><article class="card"><h3>Top traps</h3><ul><li>Assuming continuity implies differentiability</li><li>Forgetting chain rule</li><li>Wrong quotient order</li><li>Missing dy/dx for y terms</li><li>Using degree rules on x^x</li></ul></article><article class="card"><h3>30-minute plan</h3><ul><li>6 min: continuity</li><li>6 min: differentiability</li><li>8 min: derivative rules</li><li>5 min: implicit</li><li>5 min: logarithmic differentiation</li></ul></article><article class="card"><h3>Question types</h3><ul><li>Piecewise continuity</li><li>LHD/RHD</li><li>Product quotient chain</li><li>Implicit equations</li><li>Log differentiation</li><li>Second derivative</li></ul></article></div>
+      </div>
+    </section>
+
+    <section class="tint" id="print">
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">Printable revision sheet</p><h2>Continuity and Differentiability in one scan.</h2><p>Print this page or save it as PDF for offline revision.</p></div>
+        <article class="print-sheet">
+          <div class="print-grid">
+            <div><h3>Core formulas</h3><ul><li><b>Continuity condition:</b> lim x-&gt;a- f(x) = lim x-&gt;a+ f(x) = f(a)</li><li><b>First principle:</b> f'(a)=lim h-&gt;0 [f(a+h)-f(a)]/h</li><li><b>Product rule:</b> (uv) prime = u prime v + u v prime</li><li><b>Quotient rule:</b> (u/v) prime = (v u prime - u v prime)/v^2</li><li><b>Chain rule:</b> d/dx f(g(x)) = f prime(g(x)) g prime(x)</li><li><b>Basic trig derivatives:</b> d(sin x)=cos x, d(cos x)=-sin x, d(tan x)=sec^2 x</li></ul></div>
+            <div><h3>Common traps</h3><ul><li>Limit must equal function value for continuity.</li><li>A continuous function may not be differentiable.</li><li>Chain rule inner derivative is compulsory.</li><li>Quotient rule numerator order matters.</li><li>Derivative of y terms needs dy/dx.</li><li>Use radians for trigonometric derivatives.</li></ul></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap">MathsForge Chapter 5 is a free static public learning website for GitHub Pages. No paid hosting, database, backend, or paid API is required.</div></footer>
+
+  <script>
+    const root = document.documentElement;
+    const mode = document.getElementById('mode');
+    const menu = document.getElementById('menu');
+    const mobileLinks = document.getElementById('mobileLinks');
+    const savedMode = localStorage.getItem('mathsforge-ch5-mode');
+    if (savedMode === 'dark') root.classList.add('dark');
+    mode.textContent = root.classList.contains('dark') ? 'Light' : 'Dark';
+    mode.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('mathsforge-ch5-mode', root.classList.contains('dark') ? 'dark' : 'light');
+      mode.textContent = root.classList.contains('dark') ? 'Light' : 'Dark';
+    });
+    menu.addEventListener('click', () => mobileLinks.classList.toggle('hide'));
+
+    function connectFilter(inputId, cardSelector, attr) {
+      const input = document.getElementById(inputId);
+      const cards = Array.from(document.querySelectorAll(cardSelector));
+      input.addEventListener('input', () => {
+        const query = input.value.trim().toLowerCase();
+        cards.forEach((card) => card.classList.toggle('hide', query && !card.dataset[attr].includes(query)));
+      });
+    }
+    connectFilter('noteSearch', '.note-card', 'note');
+    connectFilter('questionSearch', '.question-card', 'q');
+
+    document.querySelectorAll('.answer-toggle').forEach((button) => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        answer.classList.toggle('open');
+        button.textContent = answer.classList.contains('open') ? 'Hide answer' : 'Show answer';
+      });
+    });
+
+    const labKind = 'derivative';
+    const svg = document.getElementById('labSvg');
+    const out = document.getElementById('labOutput');
+
+    function values() {
+      const data = {};
+      document.querySelectorAll('[data-var]').forEach((input) => data[input.dataset.var] = Number(input.value));
+      return data;
+    }
+    function matrixText(m) {
+      return '[[' + m[0][0] + ', ' + m[0][1] + '], [' + m[1][0] + ', ' + m[1][1] + ']]';
+    }
+    function renderMatrixLab() {
+      const v = values();
+      const A = [[v.a, v.b], [v.c, v.d]];
+      const B = [[v.e, v.f], [v.g, v.h]];
+      const op = document.getElementById('operation').value;
+      let R;
+      if (op === 'add') R = [[v.a + v.e, v.b + v.f], [v.c + v.g, v.d + v.h]];
+      if (op === 'sub') R = [[v.a - v.e, v.b - v.f], [v.c - v.g, v.d - v.h]];
+      if (op === 'mul') R = [[v.a * v.e + v.b * v.g, v.a * v.f + v.b * v.h], [v.c * v.e + v.d * v.g, v.c * v.f + v.d * v.h]];
+      svg.innerHTML = '<rect x="40" y="60" width="120" height="140" rx="12" fill="#d9f1f7" stroke="#145c70" stroke-width="3"/><rect x="200" y="60" width="120" height="140" rx="12" fill="#fff3d6" stroke="#ea7a3a" stroke-width="3"/><rect x="360" y="60" width="120" height="140" rx="12" fill="#fff" stroke="#111827" stroke-width="3"/><text x="80" y="135">A</text><text x="240" y="135">B</text><text x="400" y="135">Result</text><line x1="170" y1="130" x2="190" y2="130" stroke="#145c70" stroke-width="4"/><line x1="330" y1="130" x2="350" y2="130" stroke="#145c70" stroke-width="4"/>';
+      out.textContent = 'A = ' + matrixText(A) + ' | B = ' + matrixText(B) + ' | Result = ' + matrixText(R);
+    }
+    function renderDeterminantLab() {
+      const v = values();
+      const det = v.a * v.d - v.b * v.c;
+      const area = Math.abs(det);
+      svg.innerHTML = '<line x1="60" y1="240" x2="460" y2="240" stroke="#94a3b8"/><line x1="90" y1="260" x2="90" y2="40" stroke="#94a3b8"/><polygon points="90,240 ' + (90 + v.a * 35) + ',' + (240 - v.c * 35) + ' ' + (90 + (v.a + v.b) * 35) + ',' + (240 - (v.c + v.d) * 35) + ' ' + (90 + v.b * 35) + ',' + (240 - v.d * 35) + '" fill="#d9f1f7" stroke="#145c70" stroke-width="4"/><text x="110" y="38">area = |det A|</text>';
+      out.textContent = 'det A = ' + v.a + '(' + v.d + ') - ' + v.b + '(' + v.c + ') = ' + det + '. Area scale = ' + area + '.';
+    }
+    function fnValue(kind, x) {
+      if (kind === 'cube') return x * x * x;
+      if (kind === 'reciprocal') return x === 0 ? NaN : 1 / x;
+      return x * x;
+    }
+    function derivativeValue(kind, x) {
+      if (kind === 'cube') return 3 * x * x;
+      if (kind === 'reciprocal') return x === 0 ? NaN : -1 / (x * x);
+      return 2 * x;
+    }
+    function renderDerivativeLab() {
+      const kind = document.getElementById('fn').value;
+      const x = Number(document.getElementById('xValue').value);
+      const y = fnValue(kind, x);
+      const slope = derivativeValue(kind, x);
+      const px = 260 + x * 38;
+      const py = 180 - (Number.isFinite(y) ? Math.max(-4, Math.min(4, y)) * 28 : 0);
+      svg.innerHTML = '<line x1="40" y1="180" x2="480" y2="180" stroke="#94a3b8"/><line x1="260" y1="35" x2="260" y2="270" stroke="#94a3b8"/><path d="M80 245 C150 210, 205 120, 260 90 C320 58, 390 118, 455 74" fill="none" stroke="#145c70" stroke-width="4"/><line x1="' + (px - 80) + '" y1="' + (py + 40) + '" x2="' + (px + 80) + '" y2="' + (py - 40) + '" stroke="#ea7a3a" stroke-width="4"/><circle cx="' + px + '" cy="' + py + '" r="7" fill="#111827"/>';
+      out.textContent = 'x = ' + x.toFixed(1) + ', f(x) = ' + (Number.isFinite(y) ? y.toFixed(3) : 'undefined') + ', f prime(x) = ' + (Number.isFinite(slope) ? slope.toFixed(3) : 'undefined') + '.';
+    }
+    function renderApplicationLab() {
+      const model = document.getElementById('model').value;
+      const x = Number(document.getElementById('xValue').value);
+      const value = model === 'area' ? x * (20 - 2 * x) : -x * x + 12 * x - 20;
+      const derivative = model === 'area' ? 20 - 4 * x : -2 * x + 12;
+      const nature = derivative > 0.05 ? 'increasing here' : derivative < -0.05 ? 'decreasing here' : 'critical point';
+      const px = 70 + x * 38;
+      const py = 230 - Math.max(0, Math.min(60, value)) * 2.4;
+      svg.innerHTML = '<line x1="50" y1="240" x2="480" y2="240" stroke="#94a3b8"/><line x1="70" y1="260" x2="70" y2="40" stroke="#94a3b8"/><path d="M70 230 C150 80, 270 60, 450 225" fill="none" stroke="#145c70" stroke-width="4"/><line x1="' + px + '" y1="50" x2="' + px + '" y2="240" stroke="#ea7a3a" stroke-width="3" stroke-dasharray="8 8"/><circle cx="' + px + '" cy="' + py + '" r="7" fill="#ea7a3a"/>';
+      out.textContent = 'x = ' + x.toFixed(1) + ', value = ' + value.toFixed(2) + ', derivative = ' + derivative.toFixed(2) + ', so the graph is ' + nature + '.';
+    }
+    function renderLab() {
+      if (labKind === 'matrix') renderMatrixLab();
+      else if (labKind === 'determinant') renderDeterminantLab();
+      else if (labKind === 'derivative') renderDerivativeLab();
+      else renderApplicationLab();
+    }
+    document.querySelectorAll('#lab input, #lab select').forEach((control) => control.addEventListener('input', renderLab));
+    document.querySelectorAll('#lab select').forEach((control) => control.addEventListener('change', renderLab));
+    renderLab();
+  </script>
+</body>
+</html>
