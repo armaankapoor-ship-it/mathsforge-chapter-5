@@ -12,15 +12,41 @@
     @media(max-width:980px){.links{display:none}.menu{display:inline-flex}.mobile-links{display:grid;gap:8px;margin-top:8px;border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:10px}.mobile-links a{text-decoration:none;font-size:12px;font-weight:950;color:var(--text);padding:10px}.cards-3,.cards-2,.dashboard,.lab-shell,.print-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
     @media print{.topbar,.cta,.lab-card,.practice-filter,.answer-toggle,.footer{display:none!important}section{padding:18px 0;border:0}.card,.formula,.derivation,.diagram,.question-card,.print-sheet{box-shadow:none;border:1px solid #ddd}.print-grid{grid-template-columns:1fr 1fr}.hero{padding:20px 0}.hero h1{font-size:36px}}
   </style>
+<!-- MF3D_STYLES_START -->
+<style id="mf3d-model-bank-styles">
+  #models3d{position:relative;overflow:hidden}
+  .mf3d-toolbar{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 18px}
+  .mf3d-toolbar button{border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);padding:10px 14px;font-size:12px;font-weight:950}
+  .mf3d-toolbar button.active{background:#111827;color:white;border-color:#111827}
+  .dark .mf3d-toolbar button.active{background:var(--mint);color:#111827;border-color:var(--mint)}
+  .mf3d-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .mf3d-card{border:1px solid var(--line);border-radius:10px;background:var(--panel);box-shadow:0 18px 48px rgba(15,23,42,.07);overflow:hidden}
+  .dark .mf3d-card{box-shadow:none}
+  .mf3d-canvas-wrap{position:relative;aspect-ratio:16/10;background:radial-gradient(circle at 30% 16%,rgba(185,246,222,.45),transparent 34%),linear-gradient(135deg,rgba(217,241,247,.9),rgba(255,255,255,.75))}
+  .dark .mf3d-canvas-wrap{background:radial-gradient(circle at 30% 16%,rgba(185,246,222,.16),transparent 35%),linear-gradient(135deg,rgba(20,92,112,.25),rgba(255,255,255,.04))}
+  .mf3d-canvas{display:block;width:100%;height:100%;touch-action:none}
+  .mf3d-badge{position:absolute;inset:12px auto auto 12px;border:1px solid rgba(255,255,255,.7);border-radius:999px;background:rgba(255,255,255,.76);backdrop-filter:blur(12px);color:#145c70;padding:6px 9px;font-size:10px;font-weight:950;text-transform:uppercase}
+  .dark .mf3d-badge{border-color:rgba(255,255,255,.12);background:rgba(7,16,22,.72);color:var(--mint)}
+  .mf3d-body{padding:16px}
+  .mf3d-body h3{margin:0 0 8px;color:var(--ink);font-size:18px}
+  .mf3d-body p{margin:0;color:var(--text);line-height:1.6;font-weight:700}
+  .mf3d-controls{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+  .mf3d-controls label{display:grid;gap:6px;color:var(--text);font-size:11px;font-weight:950;text-transform:uppercase}
+  .mf3d-controls input{width:100%;accent-color:#145c70}
+  .mf3d-readout{display:flex;justify-content:space-between;gap:10px;margin-top:12px;color:var(--text);font-size:11px;font-weight:900}
+  @media(max-width:980px){.mf3d-grid{grid-template-columns:1fr}.mf3d-controls{grid-template-columns:1fr}}
+  @media print{#models3d{display:none!important}}
+</style>
+<!-- MF3D_STYLES_END -->
 </head>
 <body>
   <header class="topbar">
     <nav class="nav">
       <a class="brand" href="#home" aria-label="MathsForge home"><span class="brand-icon">C</span><span>MATHS<em>FORGE</em></span></a>
-      <div class="links"><a href="#map">Map</a><a href="#notes">Notes</a><a href="#formulas">Formulas</a><a href="#derivations">Proofs</a><a href="#diagrams">Diagrams</a><a href="#lab">Lab</a><a href="#practice">Practice</a><a href="#dashboard">Revise</a><a href="#print">Print</a></div>
+      <div class="links"><a href="#map">Map</a><a href="#notes">Notes</a><a href="#formulas">Formulas</a><a href="#derivations">Proofs</a><a href="#diagrams">Diagrams</a><a href="#lab">Lab</a><a href="#models3d">3D Models</a><a href="#practice">Practice</a><a href="#dashboard">Revise</a><a href="#print">Print</a></div>
       <div><button class="mode" type="button" id="mode">Dark</button><button class="menu" type="button" id="menu">Menu</button></div>
     </nav>
-    <div class="mobile-links hide" id="mobileLinks"><a href="#map">Map</a><a href="#notes">Notes</a><a href="#formulas">Formulas</a><a href="#derivations">Proofs</a><a href="#diagrams">Diagrams</a><a href="#lab">Lab</a><a href="#practice">Practice</a><a href="#dashboard">Revise</a><a href="#print">Print</a></div>
+    <div class="mobile-links hide" id="mobileLinks"><a href="#map">Map</a><a href="#notes">Notes</a><a href="#formulas">Formulas</a><a href="#derivations">Proofs</a><a href="#diagrams">Diagrams</a><a href="#lab">Lab</a><a href="#models3d">3D Models</a><a href="#practice">Practice</a><a href="#dashboard">Revise</a><a href="#print">Print</a></div>
   </header>
 
   <main>
@@ -154,8 +180,326 @@
         </div>
       </div>
     </section>
+<!-- MF3D_MODEL_BANK_START -->
+    <section class="tint" id="models3d">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">3D model bank</p>
+          <h2>20 detailed interactive 3D models for Continuity and Differentiability.</h2>
+          <p>Each model is rendered with static frontend code, so it works on GitHub Pages without paid hosting, paid APIs, databases, or subscriptions.</p>
+        </div>
+        <div class="mf3d-toolbar" aria-label="3D model display controls">
+          <button type="button" class="active" data-mf3d-action="animate">Animate</button>
+          <button type="button" data-mf3d-action="reset">Reset views</button>
+          <button type="button" data-mf3d-action="detail">High detail</button>
+        </div>
+        <div class="mf3d-grid">
+          <article class="mf3d-card" data-mf3d-card="0">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="0" aria-label="Mapping Planes 3D model"></canvas>
+              <span class="mf3d-badge">01 / Relations and functions</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Mapping Planes</h3>
+              <p>Domain points, codomain points, and arrows lifted into layered space.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="62" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="110" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="1">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="1" aria-label="Inverse Mirror 3D model"></canvas>
+              <span class="mf3d-badge">02 / Inverse functions</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Inverse Mirror</h3>
+              <p>A curve and its inverse reflected through the x=y mirror plane.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="48" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="115" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="2">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="2" aria-label="Matrix Transform Cube 3D model"></canvas>
+              <span class="mf3d-badge">03 / Matrices</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Matrix Transform Cube</h3>
+              <p>A unit cube warped by a linear transform to reveal stretch and shear.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="48" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="120" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="3">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="3" aria-label="Determinant Volume 3D model"></canvas>
+              <span class="mf3d-badge">04 / Determinants</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Determinant Volume</h3>
+              <p>Three spanning vectors forming a signed parallelepiped volume.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="62" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="125" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="4">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="4" aria-label="Continuity Bridge 3D model"></canvas>
+              <span class="mf3d-badge">05 / Continuity</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Continuity Bridge</h3>
+              <p>Two surfaces approaching a shared seam without a jump.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="48" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="110" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="5">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="5" aria-label="Tangent Plane 3D model"></canvas>
+              <span class="mf3d-badge">06 / Differentiability</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Tangent Plane</h3>
+              <p>A curved sheet with the local tangent plane at a marked point.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="48" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="115" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="6">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="6" aria-label="Derivative Field 3D model"></canvas>
+              <span class="mf3d-badge">07 / Applications</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Derivative Field</h3>
+              <p>Tangent rods following a rising curve to show local rate of change.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="62" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="120" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="7">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="7" aria-label="Riemann Solid 3D model"></canvas>
+              <span class="mf3d-badge">08 / Integrals</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Riemann Solid</h3>
+              <p>Stacked slabs accumulating area into a 3D volume model.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="48" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="125" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="8">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="8" aria-label="Rotation Shells 3D model"></canvas>
+              <span class="mf3d-badge">09 / Applications of Integrals</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Rotation Shells</h3>
+              <p>Nested shells showing how a 2D region creates volume.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="48" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="110" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="9">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="9" aria-label="Slope Flow 3D model"></canvas>
+              <span class="mf3d-badge">10 / Differential Equations</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Slope Flow</h3>
+              <p>Small direction rods guiding solution flow through space.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="62" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="115" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="10">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="10" aria-label="Vector Sum Rig 3D model"></canvas>
+              <span class="mf3d-badge">11 / Vector Algebra</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Vector Sum Rig</h3>
+              <p>Two vectors and their resultant arranged as a spatial parallelogram.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="48" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="120" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="11">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="11" aria-label="Line Plane Cut 3D model"></canvas>
+              <span class="mf3d-badge">12 / 3D Geometry</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Line Plane Cut</h3>
+              <p>A line piercing a plane with the intersection point highlighted.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="48" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="125" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="12">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="12" aria-label="Point Plane Distance 3D model"></canvas>
+              <span class="mf3d-badge">13 / 3D Geometry</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Point Plane Distance</h3>
+              <p>Shortest perpendicular path from a point to a plane.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="62" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="110" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="13">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="13" aria-label="Feasible Polytope 3D model"></canvas>
+              <span class="mf3d-badge">14 / Linear Programming</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Feasible Polytope</h3>
+              <p>Constraint planes shaping a feasible solid with best corner marked.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="48" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="115" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="14">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="14" aria-label="Sample Cube 3D model"></canvas>
+              <span class="mf3d-badge">15 / Probability</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Sample Cube</h3>
+              <p>Equally likely outcomes arranged as a cube with favourable outcomes highlighted.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="48" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="120" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="15">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="15" aria-label="Bayes Branch Tree 3D model"></canvas>
+              <span class="mf3d-badge">16 / Probability</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Bayes Branch Tree</h3>
+              <p>Cause branches splitting into observed evidence paths.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="62" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="125" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="16">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="16" aria-label="Distribution Towers 3D model"></canvas>
+              <span class="mf3d-badge">17 / Probability</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Distribution Towers</h3>
+              <p>Discrete probabilities shown as height towers across outcomes.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="48" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="110" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="17">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="17" aria-label="Trig Arc Cylinder 3D model"></canvas>
+              <span class="mf3d-badge">18 / Inverse Trigonometry</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Trig Arc Cylinder</h3>
+              <p>Principal-value arcs wrapped around a cylinder-like guide.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="48" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="115" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="18">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="18" aria-label="Symmetry Surface 3D model"></canvas>
+              <span class="mf3d-badge">19 / Definite Integrals</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Symmetry Surface</h3>
+              <p>Odd-even symmetry shown as mirrored signed surface patches.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="62" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="120" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+          <article class="mf3d-card" data-mf3d-card="19">
+            <div class="mf3d-canvas-wrap">
+              <canvas class="mf3d-canvas" data-mf3d-scene="19" aria-label="Optimization Terrain 3D model"></canvas>
+              <span class="mf3d-badge">20 / Maxima and Minima</span>
+            </div>
+            <div class="mf3d-body">
+              <h3>Optimization Terrain</h3>
+              <p>A surface with contour rings and a highlighted optimum.</p>
+              <div class="mf3d-controls">
+                <label>Spin <input type="range" min="0" max="100" value="48" data-mf3d-spin></label>
+                <label>Depth <input type="range" min="70" max="145" value="125" data-mf3d-depth></label>
+              </div>
+              <div class="mf3d-readout"><span>Live model</span><span data-mf3d-readout>ready</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+<!-- MF3D_MODEL_BANK_END -->
 
-    <section class="tint" id="practice">
+<section class="tint" id="practice">
       <div class="wrap">
         <div class="section-head"><p class="eyebrow">Practice bank</p><h2>Exam-style questions with answer reveal.</h2><p>Filter by keyword, try the question first, then reveal the answer and trap.</p></div>
         <label class="search practice-filter">Filter questions <input id="questionSearch" placeholder="Try CBSE, JEE, proof, easy, hard, formula"></label>
@@ -291,5 +635,362 @@
     document.querySelectorAll('#lab select').forEach((control) => control.addEventListener('change', renderLab));
     renderLab();
   </script>
+<!-- MF3D_SCRIPT_START -->
+<script id="mf3d-model-bank-script">
+(() => {
+  const section = document.getElementById('models3d');
+  if (!section || section.dataset.ready === 'true') return;
+  section.dataset.ready = 'true';
+
+  const canvases = Array.from(section.querySelectorAll('.mf3d-canvas'));
+  let animate = true;
+  let highDetail = true;
+  const palette = {
+    ink: '#111827',
+    grid: 'rgba(20,92,112,.18)',
+    axis: '#145c70',
+    warm: '#ea7a3a',
+    mint: '#43c59e',
+    soft: '#d9f1f7',
+    gold: '#f5b942',
+    violet: '#7564d8',
+  };
+
+  function rotate(point, ax, ay, az) {
+    let [x, y, z] = point;
+    let c = Math.cos(ay), s = Math.sin(ay);
+    [x, z] = [x * c + z * s, -x * s + z * c];
+    c = Math.cos(ax); s = Math.sin(ax);
+    [y, z] = [y * c - z * s, y * s + z * c];
+    c = Math.cos(az); s = Math.sin(az);
+    [x, y] = [x * c - y * s, x * s + y * c];
+    return [x, y, z];
+  }
+
+  function makeProjector(ctx, width, height, state) {
+    const scale = Math.min(width, height) * 0.22 * state.zoom * state.depth;
+    return (point) => {
+      const [x, y, z] = rotate(point, state.ax, state.ay, state.az);
+      const perspective = 1 / (1 + (z + 5.4) * 0.075);
+      return {
+        x: width / 2 + x * scale * perspective,
+        y: height / 2 - y * scale * perspective,
+        z,
+        p: perspective,
+      };
+    };
+  }
+
+  function line(ctx, project, a, b, color = palette.axis, width = 1.6) {
+    const pa = project(a), pb = project(b);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.beginPath();
+    ctx.moveTo(pa.x, pa.y);
+    ctx.lineTo(pb.x, pb.y);
+    ctx.stroke();
+  }
+
+  function point(ctx, project, p, color = palette.warm, size = 4) {
+    const pp = project(p);
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(pp.x, pp.y, Math.max(2, size * pp.p), 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  function text(ctx, project, p, value, color = palette.ink) {
+    const pp = project(p);
+    ctx.fillStyle = color;
+    ctx.font = '700 11px Inter, system-ui, sans-serif';
+    ctx.fillText(value, pp.x + 5, pp.y - 5);
+  }
+
+  function polygon(ctx, project, pts, fill, stroke = 'rgba(17,24,39,.24)') {
+    const pp = pts.map(project);
+    ctx.fillStyle = fill;
+    ctx.strokeStyle = stroke;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    pp.forEach((p, i) => (i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y)));
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+  }
+
+  function axes(ctx, project, label = true) {
+    line(ctx, project, [-2.8, 0, 0], [2.8, 0, 0], 'rgba(20,92,112,.45)', 1.4);
+    line(ctx, project, [0, -2.2, 0], [0, 2.2, 0], 'rgba(20,92,112,.45)', 1.4);
+    line(ctx, project, [0, 0, -2.2], [0, 0, 2.2], 'rgba(20,92,112,.45)', 1.4);
+    for (let i = -2; i <= 2; i++) {
+      line(ctx, project, [i, -2, -1.4], [i, 2, -1.4], palette.grid, 0.75);
+      line(ctx, project, [-2, i, -1.4], [2, i, -1.4], palette.grid, 0.75);
+    }
+    if (label) {
+      text(ctx, project, [2.9, 0, 0], 'x', palette.axis);
+      text(ctx, project, [0, 2.3, 0], 'y', palette.axis);
+      text(ctx, project, [0, 0, 2.3], 'z', palette.axis);
+    }
+  }
+
+  function curve(ctx, project, pts, color = palette.warm, width = 2.4) {
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.beginPath();
+    pts.map(project).forEach((p, i) => (i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y)));
+    ctx.stroke();
+  }
+
+  function arrow(ctx, project, a, b, color = palette.warm) {
+    line(ctx, project, a, b, color, 3);
+    point(ctx, project, b, color, 5);
+  }
+
+  function cubeFaces(cx = 0, cy = 0, cz = 0, sx = 1, sy = 1, sz = 1) {
+    const v = [
+      [cx - sx, cy - sy, cz - sz], [cx + sx, cy - sy, cz - sz], [cx + sx, cy + sy, cz - sz], [cx - sx, cy + sy, cz - sz],
+      [cx - sx, cy - sy, cz + sz], [cx + sx, cy - sy, cz + sz], [cx + sx, cy + sy, cz + sz], [cx - sx, cy + sy, cz + sz],
+    ];
+    return { v, faces: [[0,1,2,3], [4,5,6,7], [0,1,5,4], [1,2,6,5], [2,3,7,6], [3,0,4,7]], edges: [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]] };
+  }
+
+  function surface(ctx, project, fn, colorA = 'rgba(217,241,247,.72)', colorB = 'rgba(234,122,58,.18)', size = 9) {
+    const step = highDetail ? 0.5 : 0.75;
+    const lines = [];
+    for (let x = -2; x <= 2.001; x += step) {
+      const pts = [];
+      for (let y = -2; y <= 2.001; y += step) pts.push([x, y, fn(x, y)]);
+      lines.push(pts);
+    }
+    for (let y = -2; y <= 2.001; y += step) {
+      const pts = [];
+      for (let x = -2; x <= 2.001; x += step) pts.push([x, y, fn(x, y)]);
+      lines.push(pts);
+    }
+    for (const pts of lines) curve(ctx, project, pts, colorA, 1);
+    for (let x = -1.5; x <= 1.5; x += 1.5) {
+      for (let y = -1.5; y <= 1.5; y += 1.5) point(ctx, project, [x, y, fn(x, y)], colorB, size);
+    }
+  }
+
+  const renderers = [
+    (ctx, project, t) => {
+      axes(ctx, project, false);
+      const left = [[-1.8,1,0],[-1.8,0,0],[-1.8,-1,0]];
+      const right = [[1.8,1.1,.45],[1.8,0,.05],[1.8,-1.1,-.35]];
+      for (const p of left) point(ctx, project, p, palette.axis, 7);
+      for (const p of right) point(ctx, project, p, palette.warm, 7);
+      left.forEach((p, i) => arrow(ctx, project, p, right[i], i === 1 ? palette.mint : palette.warm));
+      text(ctx, project, [-2.25,1.35,0], 'A', palette.axis);
+      text(ctx, project, [2.05,1.45,.45], 'B', palette.warm);
+    },
+    (ctx, project, t) => {
+      axes(ctx, project);
+      polygon(ctx, project, [[-2,-2,0],[2,2,0],[2,2,.05],[-2,-2,.05]], 'rgba(67,197,158,.18)', 'rgba(67,197,158,.5)');
+      const a = [], b = [];
+      for (let x = -1.8; x <= 1.8; x += 0.08) { a.push([x, Math.sin(x * 1.5), .45]); b.push([Math.sin(x * 1.5), x, -.45]); }
+      curve(ctx, project, a, palette.warm, 3);
+      curve(ctx, project, b, palette.axis, 3);
+      text(ctx, project, [1.6, 1.9, .2], 'x = y', palette.mint);
+    },
+    (ctx, project, t) => {
+      axes(ctx, project);
+      const c = cubeFaces(0,0,0,1,1,1);
+      const shear = 0.45 + 0.18 * Math.sin(t);
+      const transform = ([x,y,z]) => [x + shear*y, y*.82 + .2*z, z + .25*x];
+      for (const face of c.faces) polygon(ctx, project, face.map((i) => transform(c.v[i])), 'rgba(217,241,247,.22)', 'rgba(20,92,112,.28)');
+      for (const [a,b] of c.edges) line(ctx, project, transform(c.v[a]), transform(c.v[b]), palette.axis, 1.8);
+    },
+    (ctx, project) => {
+      axes(ctx, project);
+      const o = [0,0,0], a = [1.7,.2,.4], b = [.35,1.5,.25], c = [.25,.35,1.55];
+      const pts = [o,a,b,[a[0]+b[0],a[1]+b[1],a[2]+b[2]],c,[a[0]+c[0],a[1]+c[1],a[2]+c[2]],[b[0]+c[0],b[1]+c[1],b[2]+c[2]],[a[0]+b[0]+c[0],a[1]+b[1]+c[1],a[2]+b[2]+c[2]]];
+      [[0,1,3,2],[0,1,5,4],[0,2,6,4],[7,5,1,3],[7,6,2,3],[7,5,4,6]].forEach((face, i) => polygon(ctx, project, face.map((idx) => pts[idx]), i % 2 ? 'rgba(234,122,58,.18)' : 'rgba(217,241,247,.5)'));
+      arrow(ctx, project, o, a, palette.warm); arrow(ctx, project, o, b, palette.axis); arrow(ctx, project, o, c, palette.mint);
+    },
+    (ctx, project) => {
+      axes(ctx, project);
+      surface(ctx, project, (x,y) => .3*Math.sin(x*1.2) + .25*Math.cos(y*1.3), 'rgba(20,92,112,.5)', 'rgba(234,122,58,.22)', 3);
+      curve(ctx, project, [[-2,0,0],[2,0,0]], palette.mint, 3);
+    },
+    (ctx, project) => {
+      axes(ctx, project);
+      surface(ctx, project, (x,y) => .35*Math.sin(x) + .25*Math.cos(y), 'rgba(20,92,112,.42)', palette.warm, 3);
+      polygon(ctx, project, [[-.9,-.9,.02],[1.4,-.9,.48],[1.4,1.25,.84],[-.9,1.25,.38]], 'rgba(234,122,58,.24)', 'rgba(234,122,58,.7)');
+      point(ctx, project, [.25,.2,.42], palette.warm, 7);
+    },
+    (ctx, project, t) => {
+      axes(ctx, project);
+      const pts = [];
+      for (let x=-2; x<=2; x+=.08) pts.push([x, Math.sin(x*1.4), .3*Math.cos(x)]);
+      curve(ctx, project, pts, palette.warm, 3);
+      for (let x=-1.8; x<=1.8; x+=.45) {
+        const y = Math.sin(x*1.4), z = .3*Math.cos(x);
+        line(ctx, project, [x-.18, y-.25, z], [x+.18, y+.25, z], palette.axis, 2);
+      }
+    },
+    (ctx, project) => {
+      axes(ctx, project);
+      for (let i=0;i<12;i++) {
+        const x = -1.8 + i*.32, h = .25 + Math.max(0, 1.2 - Math.abs(x*.8));
+        polygon(ctx, project, [[x,-.75,0],[x+.24,-.75,0],[x+.24,.75,0],[x,.75,0]], 'rgba(217,241,247,.35)');
+        line(ctx, project, [x,-.75,0], [x,-.75,h], palette.warm, 4);
+        line(ctx, project, [x+.24,.75,0], [x+.24,.75,h], palette.warm, 4);
+      }
+    },
+    (ctx, project) => {
+      axes(ctx, project, false);
+      for (let r=.35;r<=1.8;r+=.28) {
+        const pts = [];
+        for (let a=0; a<=Math.PI*2+.1; a+=.16) pts.push([r*Math.cos(a), .8*Math.sin(a), r*Math.sin(a)]);
+        curve(ctx, project, pts, r>1.4?palette.warm:palette.axis, 1.4);
+      }
+      curve(ctx, project, [[0,-.8,0],[0,.8,0]], palette.mint, 3);
+    },
+    (ctx, project) => {
+      axes(ctx, project);
+      for (let x=-1.8;x<=1.8;x+=.6) for (let y=-1.2;y<=1.2;y+=.55) {
+        const z = .25*Math.sin(x+y);
+        line(ctx, project, [x-.13,y,z-.08], [x+.13,y,z+.08], palette.axis, 2);
+      }
+      const pts=[]; for(let x=-1.8;x<=1.8;x+=.08) pts.push([x,.55*Math.sin(x),.45*Math.cos(x*.8)]);
+      curve(ctx, project, pts, palette.warm, 3);
+    },
+    (ctx, project) => {
+      axes(ctx, project);
+      const a=[1.25,.35,.55], b=[.35,1.25,.3], s=[a[0]+b[0],a[1]+b[1],a[2]+b[2]];
+      arrow(ctx, project, [0,0,0], a, palette.warm);
+      arrow(ctx, project, [0,0,0], b, palette.axis);
+      arrow(ctx, project, [0,0,0], s, palette.mint);
+      line(ctx, project, a, s, 'rgba(20,92,112,.45)', 1.5);
+      line(ctx, project, b, s, 'rgba(20,92,112,.45)', 1.5);
+    },
+    (ctx, project) => {
+      axes(ctx, project);
+      polygon(ctx, project, [[-1.8,-1.2,0],[1.8,-1.2,.15],[1.5,1.2,.55],[-1.5,1.2,.25]], 'rgba(217,241,247,.5)', 'rgba(20,92,112,.55)');
+      arrow(ctx, project, [-1.7,-1.3,-1.1], [1.35,.95,.85], palette.warm);
+      point(ctx, project, [.42,.24,.35], palette.mint, 8);
+    },
+    (ctx, project) => {
+      axes(ctx, project);
+      polygon(ctx, project, [[-1.8,-1.15,0],[1.8,-1.15,.1],[1.55,1.2,.5],[-1.5,1.2,.25]], 'rgba(217,241,247,.5)', 'rgba(20,92,112,.55)');
+      point(ctx, project, [.6,.2,1.65], palette.warm, 8);
+      arrow(ctx, project, [.6,.2,1.65], [.48,.18,.42], palette.warm);
+      point(ctx, project, [.48,.18,.42], palette.mint, 6);
+    },
+    (ctx, project) => {
+      axes(ctx, project);
+      const pts = [[-1,-1,0],[1.3,-1,0],[1.6,.6,0],[.2,1.25,0],[-1.1,.7,0],[0,0,1.4],[.9,.2,1.1]];
+      [[0,1,2,3,4],[0,1,6,5],[1,2,6],[2,3,6],[3,4,5,6],[4,0,5]].forEach((face,i)=>polygon(ctx, project, face.map(j=>pts[j]), i? 'rgba(217,241,247,.35)':'rgba(234,122,58,.18)'));
+      point(ctx, project, [1.6,.6,0], palette.warm, 8);
+    },
+    (ctx, project) => {
+      axes(ctx, project, false);
+      const c = cubeFaces(0,0,0,1.35,1.35,1.35);
+      for (const [a,b] of c.edges) line(ctx, project, c.v[a], c.v[b], 'rgba(20,92,112,.45)', 1.5);
+      c.v.forEach((p,i)=>point(ctx, project, p, i<3 ? palette.warm : palette.axis, i<3 ? 7 : 4));
+      text(ctx, project, [-1.6,1.55,1.35], 'S', palette.axis);
+    },
+    (ctx, project) => {
+      axes(ctx, project, false);
+      const root = [0,1.5,0], a=[-1,.35,.5], b=[1,.35,-.5], leaves=[[-1.6,-1,.8],[-.5,-1,.15],[.55,-1,-.2],[1.55,-1,-.75]];
+      [a,b].forEach(p=>arrow(ctx, project, root, p, palette.axis));
+      leaves.forEach((p,i)=>arrow(ctx, project, i<2?a:b, p, i%2?palette.mint:palette.warm));
+      [root,a,b,...leaves].forEach((p,i)=>point(ctx, project, p, i<3?palette.axis:palette.warm, 6));
+    },
+    (ctx, project) => {
+      axes(ctx, project);
+      const heights=[.2,.55,1.05,1.45,1.05,.55,.2];
+      heights.forEach((h,i)=> {
+        const x=-1.8+i*.6; const c=cubeFaces(x,0,h/2,.18,.42,h/2);
+        c.faces.forEach(face=>polygon(ctx, project, face.map(j=>c.v[j]), i===3?'rgba(234,122,58,.32)':'rgba(217,241,247,.45)'));
+      });
+    },
+    (ctx, project) => {
+      axes(ctx, project, false);
+      for (let z=-1.2; z<=1.2; z+=.35) {
+        const pts=[]; for (let a=-1.2; a<=1.2; a+=.08) pts.push([Math.cos(a), Math.sin(a), z]);
+        curve(ctx, project, pts, z>0?palette.warm:palette.axis, 1.3);
+      }
+      curve(ctx, project, [[0,0,-1.4],[0,0,1.4]], palette.mint, 2);
+    },
+    (ctx, project) => {
+      axes(ctx, project);
+      surface(ctx, project, (x,y)=> .45*(x*x-y*y)/3, 'rgba(20,92,112,.36)', palette.warm, 3);
+      curve(ctx, project, [[-2,0,0],[2,0,0]], palette.warm, 3);
+      curve(ctx, project, [[0,-2,0],[0,2,0]], palette.mint, 3);
+    },
+    (ctx, project) => {
+      axes(ctx, project);
+      surface(ctx, project, (x,y)=> 1.45 - .35*(x*x + y*y), 'rgba(20,92,112,.38)', palette.warm, 3);
+      point(ctx, project, [0,0,1.45], palette.warm, 9);
+      for (let r=.45;r<=1.8;r+=.38) { const pts=[]; for(let a=0;a<=Math.PI*2+.1;a+=.16) pts.push([r*Math.cos(a),r*Math.sin(a),1.45-.35*r*r]); curve(ctx, project, pts, palette.mint, 1.4); }
+    },
+  ];
+
+  function setup(canvas, index) {
+    const card = canvas.closest('.mf3d-card');
+    const readout = card.querySelector('[data-mf3d-readout]');
+    const spin = card.querySelector('[data-mf3d-spin]');
+    const depth = card.querySelector('[data-mf3d-depth]');
+    const state = { ax: -0.65, ay: 0.8 + index * 0.08, az: 0, zoom: 1, depth: Number(depth.value) / 100, active: true, dragging: false, lastX: 0, lastY: 0 };
+    const ctx = canvas.getContext('2d');
+    const observer = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => { state.active = entries.some((entry) => entry.isIntersecting); }, { rootMargin: '160px' }) : null;
+    if (observer) observer.observe(canvas);
+
+    canvas.addEventListener('pointerdown', (event) => { state.dragging = true; state.lastX = event.clientX; state.lastY = event.clientY; canvas.setPointerCapture(event.pointerId); });
+    canvas.addEventListener('pointermove', (event) => {
+      if (!state.dragging) return;
+      const dx = event.clientX - state.lastX;
+      const dy = event.clientY - state.lastY;
+      state.ay += dx * 0.01;
+      state.ax += dy * 0.01;
+      state.lastX = event.clientX;
+      state.lastY = event.clientY;
+    });
+    canvas.addEventListener('pointerup', () => { state.dragging = false; });
+    canvas.addEventListener('wheel', (event) => { event.preventDefault(); state.zoom = Math.min(1.7, Math.max(.6, state.zoom - event.deltaY * .001)); }, { passive: false });
+    canvas.addEventListener('dblclick', () => { state.ax = -0.65; state.ay = 0.8 + index * 0.08; state.zoom = 1; });
+    spin.addEventListener('input', () => { readout.textContent = 'spin ' + spin.value + '%'; });
+    depth.addEventListener('input', () => { state.depth = Number(depth.value) / 100; readout.textContent = 'depth ' + depth.value + '%'; });
+
+    function draw(time) {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const width = Math.max(320, Math.floor(rect.width * dpr));
+      const height = Math.max(200, Math.floor(rect.height * dpr));
+      if (canvas.width !== width || canvas.height !== height) { canvas.width = width; canvas.height = height; }
+      ctx.clearRect(0, 0, width, height);
+      ctx.save();
+      ctx.scale(dpr, dpr);
+      const project = makeProjector(ctx, rect.width, rect.height, state);
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      if (animate && state.active && !state.dragging) state.ay += (Number(spin.value) / 100) * 0.006;
+      const renderer = renderers[index % renderers.length];
+      renderer(ctx, project, time * 0.001, state);
+      ctx.restore();
+    }
+    return { draw, state };
+  }
+
+  const models = canvases.map((canvas, index) => setup(canvas, index));
+  function frame(time) { models.forEach((model) => model.draw(time)); requestAnimationFrame(frame); }
+  requestAnimationFrame(frame);
+
+  section.querySelector('[data-mf3d-action="animate"]')?.addEventListener('click', (event) => {
+    animate = !animate;
+    event.currentTarget.classList.toggle('active', animate);
+  });
+  section.querySelector('[data-mf3d-action="reset"]')?.addEventListener('click', () => {
+    models.forEach((model, index) => { model.state.ax = -0.65; model.state.ay = 0.8 + index * 0.08; model.state.zoom = 1; });
+  });
+  section.querySelector('[data-mf3d-action="detail"]')?.addEventListener('click', (event) => {
+    highDetail = !highDetail;
+    event.currentTarget.classList.toggle('active', highDetail);
+  });
+})();
+</script>
+<!-- MF3D_SCRIPT_END -->
 </body>
 </html>
