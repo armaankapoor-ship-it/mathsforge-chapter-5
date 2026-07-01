@@ -21,7 +21,7 @@ https://github.com/armaankapoor-ship-it/mathsforge-chapter-5
 - Derivation and proof bank
 - 2D SVG diagram bank
 - Interactive simulation lab
-- 20 detailed interactive 3D model bank
+- 20 chapter-specific detailed interactive 3D models
 - Practice question bank with answer reveal
 - Revision dashboard
 - Printable revision sheet
