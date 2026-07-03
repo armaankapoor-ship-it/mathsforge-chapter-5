@@ -1,8 +1,20 @@
-# MathsForge Chapter 5 - Continuity and Differentiability
+# Continuity and Differentiability Forge
 
-A separate, static Class 12 Mathematics learning website for **Chapter 5: Continuity and Differentiability**. It is frontend-only, so it can be shared publicly through GitHub Pages without paid hosting, paid APIs, databases, or subscriptions.
+A separate, static Class 12 Mathematics learning website for **Chapter 5: Continuity and Differentiability**. It is part of **MathsForge** and is built as a frontend-only project, so it can be shared publicly through Netlify or GitHub Pages without paid hosting, paid APIs, databases, or subscriptions.
 
-Public website:
+Netlify website name:
+
+```text
+continuity-differentiability-forge
+```
+
+Netlify public website:
+
+```text
+https://continuity-differentiability-forge.netlify.app/
+```
+
+GitHub Pages public website:
 
 ```text
 https://armaankapoor-ship-it.github.io/mathsforge-chapter-5/
@@ -20,12 +32,14 @@ https://github.com/armaankapoor-ship-it/mathsforge-chapter-5
 - Formula sheet
 - Derivation and proof bank
 - 2D SVG diagram bank
-- Interactive simulation lab
+- Interactive simulations
 - 20 chapter-specific detailed interactive 3D models
 - Practice question bank with answer reveal
 - Revision dashboard
 - Printable revision sheet
 - Responsive premium UI inspired by MathsForge
+- Netlify deployment config
+- GitHub Pages deployment workflow
 
 ## Run Locally
 
@@ -37,12 +51,35 @@ No install, backend, database, paid API, or build step is required for local vie
 
 ```text
 .
-|-- index.html
-|-- README.md
-|-- .nojekyll
-+-- .github/
-    +-- workflows/
-        +-- pages.yml
+├── index.html
+├── README.md
+├── netlify.toml
+├── .nojekyll
+└── .github/
+    └── workflows/
+        └── pages.yml
+```
+
+## How to Publish This Website for Free Using Netlify
+
+1. Create a free Netlify account at `https://www.netlify.com`.
+2. Click **Add new site**.
+3. Choose **Deploy manually** for the fastest upload, or choose **Import an existing project** to connect the GitHub repository.
+4. If deploying manually, drag this chapter folder into Netlify.
+5. If importing from GitHub, select the matching repository and use these settings:
+
+```text
+Site name: continuity-differentiability-forge
+Base directory: leave blank
+Build command: leave blank
+Publish directory: .
+```
+
+6. Click **Deploy**.
+7. After deployment, Netlify will show the public link:
+
+```text
+https://continuity-differentiability-forge.netlify.app/
 ```
 
 ## How to Publish This Website for Free Using GitHub Pages
@@ -67,6 +104,8 @@ https://armaankapoor-ship-it.github.io/mathsforge-chapter-5/
 
 Edit `index.html`, save the file, commit the change, and push it to GitHub. GitHub Pages will publish the updated website automatically after the workflow runs.
 
+For Netlify, either push the update to the connected GitHub repository or open Netlify and redeploy the updated chapter folder manually.
+
 ## Add More Chapters Later
 
-Create a new repository for each chapter, copy this structure, replace the chapter content in `index.html`, update the README title and public link, then publish it with GitHub Pages.
+Create a new folder or repository for each chapter, copy this structure, replace the chapter content in `index.html`, update the README title, update the Netlify site name to `chapter-name-forge`, and publish it with Netlify or GitHub Pages.
